@@ -135,10 +135,13 @@
           "name": "_letter"
         },
         {
-          "type": "REPEAT",
+          "type": "IMMEDIATE_TOKEN",
           "content": {
-            "type": "PATTERN",
-            "value": "\\w"
+            "type": "REPEAT",
+            "content": {
+              "type": "PATTERN",
+              "value": "\\w"
+            }
           }
         }
       ]

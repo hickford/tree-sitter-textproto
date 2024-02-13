@@ -1,0 +1,21 @@
+===
+Message
+====
+
+message {
+  count: 5
+  name: "Harry"
+}
+
+----
+
+(source_file
+  (message_field
+    (field_name)
+    (message_value
+      (scalar_field
+        (field_name)
+        (dec_unsigned_integer))
+      (scalar_field
+        (field_name)
+        (string)))))
