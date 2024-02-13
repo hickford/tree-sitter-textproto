@@ -1,37 +1,62 @@
-==================
+================================================================================
 Scalar fields
-==================
+================================================================================
 
 person: "Harry"
 person: 'Ron'
 dimension: [128, 160, 16, 16]
 
----
+--------------------------------------------------------------------------------
 
 (source_file
   (scalar_field
     (field_name)
-    (string))
+    (scalar_value
+      (string)))
   (scalar_field
     (field_name)
-    (string))
+    (scalar_value
+      (string)))
   (scalar_field
     (field_name)
     (scalar_list
-      (dec_unsigned_integer)
-      (dec_unsigned_integer)
-      (dec_unsigned_integer)
-      (dec_unsigned_integer))))
+      (scalar_value
+        (dec_unsigned_integer))
+      (scalar_value
+        (dec_unsigned_integer))
+      (scalar_value
+        (dec_unsigned_integer))
+      (scalar_value
+        (dec_unsigned_integer)))))
 
-====
+================================================================================
 Identifier
-====
+================================================================================
 
 count: UNKNOWN
 
-----
+--------------------------------------------------------------------------------
 
 (source_file
-      (scalar_field
-        (field_name)
-        (identifier)))
+  (scalar_field
+    (field_name)
+    (scalar_value
+      (identifier))))
+
+================================================================================
+Comma
+================================================================================
+
+foo: 10,bar: 20
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (scalar_field
+    (field_name)
+    (scalar_value
+      (dec_unsigned_integer)))
+  (scalar_field
+    (field_name)
+    (scalar_value
+      (dec_unsigned_integer))))

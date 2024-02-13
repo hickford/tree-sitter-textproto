@@ -1,13 +1,13 @@
-===
+================================================================================
 Message
-====
+================================================================================
 
 message {
   count: 5
   name: "Harry"
 }
 
-----
+--------------------------------------------------------------------------------
 
 (source_file
   (message_field
@@ -15,7 +15,9 @@ message {
     (message_value
       (scalar_field
         (field_name)
-        (dec_unsigned_integer))
+        (scalar_value
+          (dec_unsigned_integer)))
       (scalar_field
         (field_name)
-        (string)))))
+        (scalar_value
+          (string))))))

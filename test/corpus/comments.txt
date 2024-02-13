@@ -1,17 +1,18 @@
-======
+================================================================================
 Comments
-======
+================================================================================
 
 # abc
-# another comment
+# another comment with # hash
 count: 5 # later comment 
 
-------
+--------------------------------------------------------------------------------
 
 (source_file
   (comment)
   (comment)
   (scalar_field
     (field_name)
-    (dec_unsigned_integer))
+    (scalar_value
+      (dec_unsigned_integer)))
   (comment))

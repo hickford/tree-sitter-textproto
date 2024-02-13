@@ -1,6 +1,6 @@
-=====
-Complex example
-=====
+================================================================================
+Complex message
+================================================================================
 
 # This file contains custom benchmark configs, in addition to the ones generated
 # in the source code.
@@ -32,3 +32,108 @@ convolution_benchmark {
   fwd_algo: CONVOLUTION_FWD_ALGO_IMPLICIT_PRECOMP_GEMM
 }
 
+--------------------------------------------------------------------------------
+
+(source_file
+  (comment)
+  (comment)
+  (comment)
+  (message_field
+    (field_name)
+    (message_value
+      (scalar_field
+        (field_name)
+        (scalar_value
+          (string)))
+      (message_field
+        (field_name)
+        (message_value
+          (scalar_field
+            (field_name)
+            (scalar_list
+              (scalar_value
+                (dec_unsigned_integer))
+              (scalar_value
+                (dec_unsigned_integer))
+              (scalar_value
+                (dec_unsigned_integer))
+              (scalar_value
+                (dec_unsigned_integer))))
+          (scalar_field
+            (field_name)
+            (scalar_value
+              (identifier)))
+          (scalar_field
+            (field_name)
+            (scalar_value
+              (identifier)))))
+      (message_field
+        (field_name)
+        (message_value
+          (scalar_field
+            (field_name)
+            (scalar_list
+              (scalar_value
+                (dec_unsigned_integer))
+              (scalar_value
+                (dec_unsigned_integer))
+              (scalar_value
+                (dec_unsigned_integer))
+              (scalar_value
+                (dec_unsigned_integer))))
+          (scalar_field
+            (field_name)
+            (scalar_value
+              (identifier)))
+          (scalar_field
+            (field_name)
+            (scalar_value
+              (identifier)))))
+      (message_field
+        (field_name)
+        (message_value
+          (scalar_field
+            (field_name)
+            (scalar_list
+              (scalar_value
+                (dec_unsigned_integer))
+              (scalar_value
+                (dec_unsigned_integer))
+              (scalar_value
+                (dec_unsigned_integer))
+              (scalar_value
+                (dec_unsigned_integer))))
+          (scalar_field
+            (field_name)
+            (scalar_value
+              (identifier)))
+          (scalar_field
+            (field_name)
+            (scalar_value
+              (identifier)))))
+      (message_field
+        (field_name)
+        (message_value
+          (scalar_field
+            (field_name)
+            (scalar_list
+              (scalar_value
+                (dec_unsigned_integer))
+              (scalar_value
+                (dec_unsigned_integer))))
+          (scalar_field
+            (field_name)
+            (scalar_value
+              (identifier)))
+          (scalar_field
+            (field_name)
+            (scalar_value
+              (identifier)))
+          (scalar_field
+            (field_name)
+            (scalar_value
+              (identifier)))))
+      (scalar_field
+        (field_name)
+        (scalar_value
+          (identifier))))))

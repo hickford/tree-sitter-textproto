@@ -200,7 +200,7 @@
           "members": [
             {
               "type": "SYMBOL",
-              "name": "_scalar_value"
+              "name": "scalar_value"
             },
             {
               "type": "SYMBOL",
@@ -249,7 +249,7 @@
                 "members": [
                   {
                     "type": "SYMBOL",
-                    "name": "_scalar_value"
+                    "name": "scalar_value"
                   },
                   {
                     "type": "REPEAT",
@@ -262,7 +262,7 @@
                         },
                         {
                           "type": "SYMBOL",
-                          "name": "_scalar_value"
+                          "name": "scalar_value"
                         }
                       ]
                     }
@@ -553,7 +553,7 @@
         }
       ]
     },
-    "_scalar_value": {
+    "scalar_value": {
       "type": "CHOICE",
       "members": [
         {

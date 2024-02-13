@@ -178,39 +178,7 @@
       "required": true,
       "types": [
         {
-          "type": "dec_signed_integer",
-          "named": true
-        },
-        {
-          "type": "dec_unsigned_integer",
-          "named": true
-        },
-        {
           "type": "field_name",
-          "named": true
-        },
-        {
-          "type": "float",
-          "named": true
-        },
-        {
-          "type": "hex_signed_integer",
-          "named": true
-        },
-        {
-          "type": "hex_unsigned_integer",
-          "named": true
-        },
-        {
-          "type": "identifier",
-          "named": true
-        },
-        {
-          "type": "oct_signed_integer",
-          "named": true
-        },
-        {
-          "type": "oct_unsigned_integer",
           "named": true
         },
         {
@@ -218,11 +186,7 @@
           "named": true
         },
         {
-          "type": "signed_identifier",
-          "named": true
-        },
-        {
-          "type": "string",
+          "type": "scalar_value",
           "named": true
         }
       ]
@@ -235,6 +199,21 @@
     "children": {
       "multiple": true,
       "required": false,
+      "types": [
+        {
+          "type": "scalar_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "scalar_value",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
       "types": [
         {
           "type": "dec_signed_integer",
