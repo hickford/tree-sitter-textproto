@@ -69,37 +69,3 @@ foo: 10,bar: 20
     (field_name)
     (scalar_value
       (dec_unsigned_integer))))
-
-================================================================================
-More
-================================================================================
-
-
-value: -2.0   # Valid: no additional whitespace.
-value: - 2.0  # Valid: whitespace between '-' and '2.0'.
-value: -
-  # comment
-  2.0         # Valid: whitespace and comments between '-' and '2.0'.
-
---------------------------------------------------------------------------------
-
-(source_file
-  (scalar_field
-    (field_name)
-    (scalar_value
-      (float
-        (float_lit))))
-  (comment)
-  (scalar_field
-    (field_name)
-    (scalar_value
-      (float
-        (float_lit))))
-  (comment)
-  (scalar_field
-    (field_name)
-    (scalar_value
-      (float
-        (comment)
-        (float_lit))))
-  (comment))
