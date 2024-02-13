@@ -1,21 +1,20 @@
 module.exports = grammar({
     name: 'textproto',
-
     rules: {
         source_file: $ => repeat($._field),
         _newline: $ => "\n",
         _letter: $ => /[A-Za-z_]/,
         _oct: $ => /[0-7]/,
         _dec: $ => /[0-9]/,
-        dec_lit: $ => choice("0", seq(/[1-9]/, repeat($._dec))),
+        _dec_lit: $ => choice("0", seq(/[1-9]/, repeat($._dec))),
         _hex: $ => /[0-9A-Fa-f]/,
         _oct_int: $ => seq("0", repeat1($._oct)),
         _hex_int: $ => seq("0", choice("X", "x"), repeat1($._hex)),
         whitespace: $ => choice(" ", "\t", "\r", "\n", "\v", "\f"),
         _ident: $ => seq($._letter, repeat(/\w/)),
         identifier: $ => $._ident,
-        _single_string: $ => seq("'", /[^']+/, "'"),
-        _double_string: $ => seq('"', /[^"]+/, '"'),
+        _single_string: $ => seq("'", /[^'\n]+/, "'"),
+        _double_string: $ => seq('"', /[^"\n]+/, '"'),
         scalar_field: $ => seq($.field_name, ":", choice($._scalar_value, $.scalar_list), optional(choice(";", ","))),
         scalar_list: $ => prec(1, seq("[", optional(seq($._scalar_value, repeat(seq(",", $._scalar_value)))), "]")),
         _field: $ => choice($.scalar_field, $.message_field),
@@ -39,18 +38,10 @@ module.exports = grammar({
         oct_unsigned_integer: $ => $._oct_int,
         hex_unsigned_integer: $ => $._hex_int,
         _string: $ => choice($._single_string, $._double_string),
-        _float: $ => choice(seq($.float_lit, optional(choice("F", "f"))), seq($.dec_lit, choice("F", "f"))),
-        _dec_int: $ => $.dec_lit,
+        _float: $ => choice(seq($.float_lit, optional(choice("F", "f"))), seq($._dec_lit, choice("F", "f"))),
+        _dec_int: $ => $._dec_lit,
         float_lit: $ => seq(".", repeat1($._dec), optional($._exp)),
         _exp: $ => seq(choice("E", "e"), optional(choice("+", "-")), repeat1($._dec)),
-
-
-
-
-
-
-
-
     },
     extras: $ => [$.comment, /\s/],
 });

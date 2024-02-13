@@ -1,0 +1,59 @@
+==================
+Scalar fields
+==================
+
+person: "Harry"
+person: 'Ron'
+dimension: [128, 160, 16, 16]
+
+---
+
+(source_file
+  (scalar_field
+    (field_name)
+    (string))
+  (scalar_field
+    (field_name)
+    (string))
+  (scalar_field
+    (field_name)
+    (scalar_list
+      (dec_unsigned_integer)
+      (dec_unsigned_integer)
+      (dec_unsigned_integer)
+      (dec_unsigned_integer))))
+
+====
+Identifier
+====
+
+count: UNKNOWN
+
+----
+
+(source_file
+      (scalar_field
+        (field_name)
+        (identifier))
+
+===
+Message
+====
+
+message {
+  count: 5
+  name: "Harry"
+}
+
+----
+
+(source_file
+  (message_field
+    (field_name)
+    (message_value
+      (scalar_field
+        (field_name)
+        (dec_unsigned_integer))
+      (scalar_field
+        (field_name)
+        (string)))))

@@ -24,7 +24,7 @@
       "type": "PATTERN",
       "value": "[0-9]"
     },
-    "dec_lit": {
+    "_dec_lit": {
       "type": "CHOICE",
       "members": [
         {
@@ -156,7 +156,7 @@
         },
         {
           "type": "PATTERN",
-          "value": "[^']+"
+          "value": "[^'\\n]+"
         },
         {
           "type": "STRING",
@@ -173,7 +173,7 @@
         },
         {
           "type": "PATTERN",
-          "value": "[^\"]+"
+          "value": "[^\"\\n]+"
         },
         {
           "type": "STRING",
@@ -738,7 +738,7 @@
           "members": [
             {
               "type": "SYMBOL",
-              "name": "dec_lit"
+              "name": "_dec_lit"
             },
             {
               "type": "CHOICE",
@@ -759,7 +759,7 @@
     },
     "_dec_int": {
       "type": "SYMBOL",
-      "name": "dec_lit"
+      "name": "_dec_lit"
     },
     "float_lit": {
       "type": "SEQ",

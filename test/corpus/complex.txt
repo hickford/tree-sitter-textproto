@@ -1,0 +1,34 @@
+=====
+Complex example
+=====
+
+# This file contains custom benchmark configs, in addition to the ones generated
+# in the source code.
+
+# CUDA 9.x + Volta performance regressions in cuDNN from 7.1.4 to 7.3.0, but then fixed in 7.3.1.
+convolution_benchmark {
+  label: "NHWC_128x20x20x56x160"
+  input {
+    dimension: [128, 56, 20, 20]
+    data_type: DATA_HALF
+    format: TENSOR_NHWC
+  }
+  filter {
+    dimension: [160, 56, 5, 5]
+    data_type: DATA_HALF
+    format: TENSOR_NHWC
+  }
+  output {
+    dimension: [128, 160, 16, 16]
+    data_type: DATA_HALF
+    format: TENSOR_NHWC
+  }
+  convolution {
+    pad: [0, 0]
+    compute_mode: DATA_FLOAT
+    math_type: TENSOR_OP_MATH
+    mode: CROSS_CORRELATION
+  }
+  fwd_algo: CONVOLUTION_FWD_ALGO_IMPLICIT_PRECOMP_GEMM
+}
+

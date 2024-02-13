@@ -1,0 +1,17 @@
+======
+Comments
+======
+
+# abc
+# another comment
+count: 5 # later comment 
+
+------
+
+(source_file
+  (comment)
+  (comment)
+  (scalar_field
+    (field_name)
+    (dec_unsigned_integer))
+  (comment))
