@@ -1,0 +1,17 @@
+==================
+Field definitions
+==================
+
+person: "Harry"
+person: 'Ron'
+
+---
+
+(source_file
+  (scalar_field
+    (field_name)
+    (string))
+  (scalar_field
+    (field_name)
+    (string))
+)

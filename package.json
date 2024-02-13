@@ -1,0 +1,30 @@
+{
+  "name": "tree-sitter-textproto",
+  "version": "0.0.1",
+  "description": "Tree-sitter grammar for Protocol Buffer text format",
+  "main": "grammar.js",
+  "scripts": {
+    "test": "tree-sitter test",
+    "build": "tree-sitter generate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hickford/tree-sitter-textproto.git"
+  },
+  "keywords": [
+    "tree-sitter",
+    "textproto"
+  ],
+  "author": "M Hickford",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hickford/tree-sitter-textproto/issues"
+  },
+  "homepage": "https://github.com/hickford/tree-sitter-textproto#readme",
+  "dependencies": {
+    "nan": "^2.15.0"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.20.1"
+  }
+}
